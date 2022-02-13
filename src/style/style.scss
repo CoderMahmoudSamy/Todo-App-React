@@ -1,0 +1,104 @@
+body {
+    background-color: #2d2d2d;
+}
+
+.container {
+    padding: 20px;
+    width: 1200px;
+    margin: auto;
+}
+
+.main {
+    background-color: #3f3f3f;
+    color: #fff;
+    border-radius: 5px;
+    .add-task {
+        form {
+            overflow: hidden;
+            input {
+                border-radius: 5px;
+                padding: 15px;
+                background-color: #2d2d2d;
+                border: none;
+                width: 100%;
+                color: #ddd;
+                font-size: 20px;
+                &:focus {
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    }
+    hr {
+        border: 1px solid #2b2b2b;
+        background-color: #2b2b2b;
+        margin: 20px 0;
+    }
+    .show-task {
+        .tasks {
+            color: #fff;
+            font-size: 18px;
+            .task {
+                border-radius: 5px;
+                padding: 20px;
+                background-color: #4d4d4d;
+                margin-bottom: 5px;
+                box-shadow: 0px 7px 10px #2d2d2d;
+                display: flex;
+                align-items: center;
+                input[type='checkbox'] {
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    background-color: #2b2b2b;
+                    border-radius: 50%;
+                    position: relative;
+                    &:after {
+                        content: '\f00c';
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        background-color: #3853e9;
+                        color: #c2c2c2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        opacity: 0;
+                        font: {
+                            family: 'Font Awesome 5 Free';
+                            size: 20px;
+                            weight: bold;
+                        }
+                    }
+                    &:hover {
+                        &:after {
+                            opacity: 0.3;
+                        }
+                    }
+                    &:checked {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .task-name {
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Empty Div */
+
+.empty {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5de95d;
+}
